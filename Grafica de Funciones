@@ -1,0 +1,31 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import pyplot as plt
+
+# Función cuadrática.
+def f1(x):
+    return np.cos(x)-x*np.exp(x)
+
+# Valores del eje X que toma el gráfico.
+x=np.linspace(-20, 10, 200)
+
+# Graficar ambas funciones.
+# color de la función
+plt.plot(x, [f1(i) for i in x],color="m")
+
+#color de los ejes x e y
+plt.axhline(0, color="c")
+plt.axvline(0, color="c")
+#Nombre de los ejes 
+plt.xlabel('Eje X')
+plt.ylabel('Eje Y ')
+#Puntos que queremos que se vean de la grafica 
+plt.xlim(-30, 15)
+plt.ylim(-10,10)
+plt.title('y= cos(x)+xe^x')
+
+#plt.savefig("output.png") # Guardar gráfico como imágen PNG.
+# Mostrarlo.
+
+plt.grid(color='g', linestyle='dotted', linewidth=2)
+plt.show()
