@@ -1,0 +1,124 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNC8X9bt29ia+cTxVfL0x7R",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/MGARCIAH6/Tareas-MN/blob/main/M%C3%A9todo%20Punto%20fijo%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "POdUcj53b2-G"
+      },
+      "outputs": [],
+      "source": [
+        "from math import *\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Ingreso de la funcion que quiera ser calculada con punto fijo \n",
+        "def g(x):\n",
+        "  return cos(x)\n",
+        "\n",
+        "def puntofijo(x0,n,tol):\n",
+        "  for k  in range(n):\n",
+        "    x1=g(x0)\n",
+        "    if  (abs(x1-x0)<tol):\n",
+        "      print('x',k+1,'=',x1,'es punto fijo ')\n",
+        "      return \n",
+        "    x0=x1\n",
+        "    print('x',k+1,'=',x1)\n",
+        "puntofijo(pi/2,50,0.000001)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jBJC5SMNc5pK",
+        "outputId": "6b2b5c87-f7c6-4f09-9d8f-feb4ce9777a2"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x 1 = 6.123233995736766e-17\n",
+            "x 2 = 1.0\n",
+            "x 3 = 0.5403023058681398\n",
+            "x 4 = 0.8575532158463934\n",
+            "x 5 = 0.6542897904977791\n",
+            "x 6 = 0.7934803587425656\n",
+            "x 7 = 0.7013687736227565\n",
+            "x 8 = 0.7639596829006542\n",
+            "x 9 = 0.7221024250267077\n",
+            "x 10 = 0.7504177617637605\n",
+            "x 11 = 0.7314040424225098\n",
+            "x 12 = 0.7442373549005569\n",
+            "x 13 = 0.7356047404363474\n",
+            "x 14 = 0.7414250866101092\n",
+            "x 15 = 0.7375068905132428\n",
+            "x 16 = 0.7401473355678757\n",
+            "x 17 = 0.7383692041223232\n",
+            "x 18 = 0.7395672022122561\n",
+            "x 19 = 0.7387603198742113\n",
+            "x 20 = 0.7393038923969059\n",
+            "x 21 = 0.7389377567153445\n",
+            "x 22 = 0.7391843997714936\n",
+            "x 23 = 0.7390182624274122\n",
+            "x 24 = 0.7391301765296711\n",
+            "x 25 = 0.7390547907469174\n",
+            "x 26 = 0.7391055719265363\n",
+            "x 27 = 0.7390713652989449\n",
+            "x 28 = 0.7390944073790913\n",
+            "x 29 = 0.739078885994992\n",
+            "x 30 = 0.7390893414033927\n",
+            "x 31 = 0.7390822985224024\n",
+            "x 32 = 0.7390870426953322\n",
+            "x 33 = 0.7390838469650002\n",
+            "x 34 = 0.7390859996481299\n",
+            "x 35 = 0.7390845495752126\n",
+            "x 36 = 0.7390855263619245 es punto fijo \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "ASfybOXgdw_o"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
